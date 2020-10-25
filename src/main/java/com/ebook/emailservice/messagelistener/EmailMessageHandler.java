@@ -26,15 +26,19 @@ public class EmailMessageHandler {
       msg.setTo("surajsapkota1@gmail.com", "suraj.sharma@stjude.org", email.getTo());
 
       msg.setSubject("Yay! We received your order!");
-      msg.setText("Thank you, "+ email.getFirst_name()+"!\n"
+      msg.setText("Thank you, "+ email.getFirst_name()+"!\n\n"
       		+ "Your order information:\n" 
     		+ "Order Id:"+ email.getOrderId() +"\n\n"
     		
 			+ "Shipping Details:\n"
     		+ email.getRecipient_first_name()+ " " + email.getRecipient_last_name() +"\n"
     		+ email.getRecipient_address1() +"\n"
-    		+ email.getRecipient_city() +", " + email.getRecipient_state() +", "+ email.getRecipient_zip_code()
-    		+ "Phone: "+ email.getRecipient_phone_number());
+    		+ email.getRecipient_city() +", " + email.getRecipient_state() +", "+ email.getRecipient_zip_code() +"\n"
+    		+ "Phone: "+ email.getRecipient_phone_number() +"\n\n"
+    		
+    		+ "Contact us if you have any questions about your order.\n\n Ebook"
+    		
+    		  );
 
       javaMailSender.send(msg);
 
