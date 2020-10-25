@@ -30,8 +30,10 @@ public class EmailMessageHandler {
 		msg.setTo("surajsapkota1@gmail.com", email.getTo());
 
 		msg.setSubject("Yay! We received your order!");
-		msg.setText("Thank you, " + email.getFirst_name() + "!\n\n" + "Your order information:\n" + "Order Id:"
-				+ email.getOrderId() + "\n\n"
+		msg.setText("Thank you, " + email.getFirst_name() + "!\n\n" +
+				"Your order information:\n" +
+				"Order Id:"+ email.getOrderId() + "\n" +
+				"Order Detail:"+ email.getOrderDetail() + "\n\n"
 
 				+ "Shipping Details:\n" + email.getRecipient_first_name() + " " + email.getRecipient_last_name() + "\n"
 				+ email.getRecipient_address1() + "\n" + email.getRecipient_city() + ", " + email.getRecipient_state()
